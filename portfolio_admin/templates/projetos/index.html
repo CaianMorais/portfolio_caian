@@ -1,0 +1,16 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block content %}
+<div id="content-projetos" style="display: none;">
+    {% include 'projetos/projetos.html' %}
+</div>
+<div id="content-sobre" style="display: none;">
+    {% include 'projetos/sobre.html' %}
+</div>
+<div id="content-tecnologias" style="display: none;">
+    {% include 'projetos/tecnologias.html' %}
+</div>
+<div id="content-curriculo" style="display: none;">
+    {% include 'projetos/curriculo.html' %}
+</div>
+{% endblock %}

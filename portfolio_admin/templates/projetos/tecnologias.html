@@ -1,0 +1,8 @@
+<section class="d-flex justify-content-end text-white mt-5">
+    <h1>Tecnologias</h1>
+</section>
+<section class="section-content d-flex gap-5">
+    {% for tecnologia in tecnologias %}
+        <img width="96" height="96" src="{{ tecnologia.tecnologias_imgs.url }}">
+    {% endfor %}
+</section>
