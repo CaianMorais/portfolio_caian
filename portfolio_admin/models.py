@@ -4,7 +4,7 @@ def upload_projeto(instance, filename):
     return f'midia/projeto-{instance.titulo}/{filename}'
 
 def upload_sobre(instance, filename):
-    return f'midia/sobre-{instance.id}/{filename}'
+    return f'midia/sobre-{instance.nome}/{filename}'
 
 def upload_tecnologia(instance, filename):
     return f'midia/tecnologia-{instance.id}/{filename}'
@@ -28,7 +28,7 @@ class Sobre(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100, null=False, blank=False)
     profissao = models.CharField(max_length=100, null=False, blank=False)
-    descricao = models.TextField(max_length=5000, null=False, blank=False)
+    descricao = models.TextField(max_length=5000, null=False, blank=False, )
     foto = models.ImageField(upload_to=upload_sobre, null=True, blank=True)
     publico = models.BooleanField(default=True)
 

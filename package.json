@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:css": "npx @tailwindcss/cli@latest -i ./portfolio_admin/static/styles/teste.css -o ./portfolio_admin/static/styles/output.css -w",
+    "build:css": "npx @tailwindcss/cli@latest -i ./portfolio_admin/static/styles/teste.css -o ./portfolio_admin/static/styles/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaianMorais/portfolio_caian.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaianMorais/portfolio_caian/issues"
+  },
+  "homepage": "https://github.com/CaianMorais/portfolio_caian#readme",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "daisyui": "^5.5.5"
+  }
+}
