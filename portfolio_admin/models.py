@@ -38,6 +38,7 @@ class Sobre(models.Model):
 class Tecnologias(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=100, null=False, blank=False)
+    descricao = models.TextField(max_length=2000, null=True, blank=False)
     icone = models.ImageField(upload_to=upload_tecnologia, null=True, blank=True)
     publico = models.BooleanField(default=True)
 
