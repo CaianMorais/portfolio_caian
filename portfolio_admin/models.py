@@ -7,7 +7,7 @@ def upload_sobre(instance, filename):
     return f'midia/sobre-{instance.nome}/{filename}'
 
 def upload_tecnologia(instance, filename):
-    return f'midia/tecnologia-{instance.id}/{filename}'
+    return f'midia/tecnologia-{instance.nome}/{filename}'
 
 def upload_contato(instance, filename):
     return f'midia/contato-{instance.id}/{filename}'
@@ -45,15 +45,6 @@ class Tecnologias(models.Model):
     def __str__(self):
         return self.nome
     
-class Contato(models.Model):
-    id = models.AutoField(primary_key=True)
-    tipo = models.CharField(max_length=100, null=False, blank=False)
-    link = models.URLField(max_length=500, null=False, blank=False)
-    icone = models.ImageField(upload_to=upload_contato, null=True, blank=True)
-
-    def __str__(self):
-        return self.tipo
-    
 class Curriculo(models.Model):
     id = models.AutoField(primary_key=True)
     arquivo = models.FileField(upload_to=f'midia/curriculos/', null=False, blank=False)
@@ -61,3 +52,19 @@ class Curriculo(models.Model):
 
     def __str__(self):
         return f'Curriculo {self.id}'
+    
+    def save(self, *args, **kwargs):
+        if self.pk:
+            try:
+                old = Curriculo.objects.get(pk=self.pk)
+            except Curriculo.DoesNotExist:
+                old = None
+
+            if old and old.arquivo != self.arquivo:
+                old.arquivo.delete(save=False)
+        super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        if self.arquivo:
+            self.arquivo.delete(save=False)
+        super().delete(*args, **kwargs)

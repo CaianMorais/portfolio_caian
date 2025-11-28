@@ -5,5 +5,4 @@ from .models import *
 admin.site.register(Projetos)
 admin.site.register(Sobre)
 admin.site.register(Tecnologias)
-admin.site.register(Contato)
 admin.site.register(Curriculo)
