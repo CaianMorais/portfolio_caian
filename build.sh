@@ -9,4 +9,6 @@ python3 manage.py migrate
 npm install
 npm run build:css
 
+python3 manage.py collectstatic --noinput
+
 echo "Build concluído!"
