@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "buildCommand": "pip install -r requirements.txt && python3 manage.py migrate && npm install && npm run build:css && python manage.py collectstatic --noinput",
     "builds": [
         {
             "src": "portfolio/wsgi.py",
