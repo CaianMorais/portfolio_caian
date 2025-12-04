@@ -2,7 +2,7 @@ echo "Buildando o projeto..."
 
 pip install -r requirements.txt
 
-python3 manage.py makeigrations
+python3 manage.py makemigrations
 python3 manage.py migrate
 
 npm install
