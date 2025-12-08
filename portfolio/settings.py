@@ -156,4 +156,4 @@ if not DEBUG:
     AWS_QUERYSTRING_AUTH = True
     AWS_DEFAULT_ACL = None
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
