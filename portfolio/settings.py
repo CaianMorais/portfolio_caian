@@ -133,6 +133,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "portfolio_admin" / "static",
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
 MEDIA_ROOT = BASE_DIR / "midia"
 
@@ -154,17 +156,3 @@ if not DEBUG:
     AWS_S3_ADDRESSING_STYLE = 'virtual'
     AWS_QUERYSTRING_AUTH = True
     AWS_DEFAULT_ACL = None
-# else:
-#     STORAGES = {
-#         "default": {
-#             "BACKEND": "django.core.files.storage.FileSystemStorage",
-#         },
-#         "staticfiles": {
-#             "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
-#         },
-#     }
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
