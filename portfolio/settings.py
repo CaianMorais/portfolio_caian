@@ -34,7 +34,6 @@ DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
