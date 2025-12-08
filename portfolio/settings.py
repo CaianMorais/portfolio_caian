@@ -155,5 +155,6 @@ if not DEBUG:
     AWS_S3_ADDRESSING_STYLE = 'virtual'
     AWS_QUERYSTRING_AUTH = True
     AWS_DEFAULT_ACL = None
+    AWS_S3_SECURE_URLS = False
 
 STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
