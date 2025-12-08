@@ -153,7 +153,7 @@ if not DEBUG:
     AWS_S3_ENDPOINT_URL = os.environ.get('R2_ENDPOINT_URL')
     AWS_S3_REGION_NAME = 'auto'
     AWS_S3_ADDRESSING_STYLE = 'virtual'
-    AWS_QUERYSTRING_AUTH = False
+    AWS_QUERYSTRING_AUTH = True
     AWS_DEFAULT_ACL = None
 
 STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
