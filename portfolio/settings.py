@@ -135,7 +135,6 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 MEDIA_ROOT = BASE_DIR / "midia"
 
 if not DEBUG:
@@ -156,3 +155,5 @@ if not DEBUG:
     AWS_S3_ADDRESSING_STYLE = 'virtual'
     AWS_QUERYSTRING_AUTH = True
     AWS_DEFAULT_ACL = None
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
