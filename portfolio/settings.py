@@ -170,5 +170,5 @@ if not DEBUG:
     # AWS_DEFAULT_ACL = None
     # AWS_S3_SECURE_URLS = False
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
-# STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
+# STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
