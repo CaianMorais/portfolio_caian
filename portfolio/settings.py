@@ -141,7 +141,7 @@ if not DEBUG:
     # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
     STORAGES = {
         'default': {
-            'BACKEND': 'storages.backends.s3boto3.S3Boto3Storage',
+            'BACKEND': 'storages.backends.s3.S3Storage',
         },
         'staticfiles': {
             'BACKEND': "whitenoise.storage.CompressedManifestStaticFilesStorage",
@@ -157,4 +157,5 @@ if not DEBUG:
     AWS_DEFAULT_ACL = None
     AWS_S3_SECURE_URLS = False
 
+#STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_ROOT = BASE_DIR / "staticfiles" / "static"
