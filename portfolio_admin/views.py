@@ -5,9 +5,9 @@ from portfolio_admin.models import Projetos, Sobre, Tecnologias, Curriculo
 # Create your views here.
 
 def index(request):
-    projetos = Projetos.objects.filter(publico=True)
+    projetos = Projetos.objects.filter(publico=True).order_by("-id")
     sobre = Sobre.objects.filter(publico=True).first()
-    tecnologias = Tecnologias.objects.filter(publico=True)
+    tecnologias = Tecnologias.objects.filter(publico=True).order_by("-id")
     curriculo = Curriculo.objects.filter(publico=True).first()
 
     return render(request, "projetos/index.html", {

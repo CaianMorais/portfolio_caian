@@ -10,11 +10,9 @@ A aplicação está hospedada na Vercel, usando banco de dados Postgre da plataf
 
 ### 👩‍💻 Tecnologias
 
-Backend
-
 - Back-end: __Python3__
 - Framework: __Django__
-- Banco de dados: __Postgres/Neon (SQLAlchemy ORM)__
+- Banco de dados: __Postgres/Neon (Django ORM)__
 - Front-end: __TailwindCSS (Uiverse.io), JavaScript__
 - Storage: __Cloudflare R2 (AWS)__
 - Bibliotecas: __jQuery__
